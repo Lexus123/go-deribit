@@ -1,7 +1,0 @@
-client/**
-models/*
-vendor/**
-v3/client/**
-v3/models/*
-*.go
-v3/rpc_subscriptions.go
