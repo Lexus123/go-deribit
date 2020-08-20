@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PrivateGetOrderMarginByIdsResponse private get order margin by ids response
+//
 // swagger:model private_get_order_margin_by_ids_response
 type PrivateGetOrderMarginByIdsResponse struct {
 	BaseMessage
@@ -56,7 +56,6 @@ func (m PrivateGetOrderMarginByIdsResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO0)
-
 	var dataAO1 struct {
 		Result []*OrderIDInitialMarginPair `json:"result"`
 	}
@@ -68,7 +67,6 @@ func (m PrivateGetOrderMarginByIdsResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO1
 	}
 	_parts = append(_parts, jsonDataAO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 

@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PublicGetCurrenciesResponse public get currencies response
+//
 // swagger:model public_get_currencies_response
 type PublicGetCurrenciesResponse struct {
 	BaseMessage
@@ -56,7 +56,6 @@ func (m PublicGetCurrenciesResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO0)
-
 	var dataAO1 struct {
 		Result []*CurrencyDetail `json:"result"`
 	}
@@ -68,7 +67,6 @@ func (m PublicGetCurrenciesResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO1
 	}
 	_parts = append(_parts, jsonDataAO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 

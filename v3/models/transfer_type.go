@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // TransferType Type of transfer: `user` - sent to user, `subaccount` - sent to subaccount
+//
 // swagger:model transfer_type
 type TransferType string
 
@@ -41,7 +41,7 @@ func init() {
 }
 
 func (m TransferType) validateTransferTypeEnum(path, location string, value TransferType) error {
-	if err := validate.Enum(path, location, value, transferTypeEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, transferTypeEnum, true); err != nil {
 		return err
 	}
 	return nil

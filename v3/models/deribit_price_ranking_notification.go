@@ -8,13 +8,13 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 )
 
 // DeribitPriceRankingNotification deribit price ranking notification
+//
 // swagger:model deribit_price_ranking_notification
 type DeribitPriceRankingNotification []*DeribitPriceRankingNotificationItems0
 
@@ -45,6 +45,7 @@ func (m DeribitPriceRankingNotification) Validate(formats strfmt.Registry) error
 }
 
 // DeribitPriceRankingNotificationItems0 deribit price ranking notification items0
+//
 // swagger:model DeribitPriceRankingNotificationItems0
 type DeribitPriceRankingNotificationItems0 struct {
 

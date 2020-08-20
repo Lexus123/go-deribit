@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // OriginalOrderType Original order type. Optional field
+//
 // swagger:model original_order_type
 type OriginalOrderType string
 
@@ -38,7 +38,7 @@ func init() {
 }
 
 func (m OriginalOrderType) validateOriginalOrderTypeEnum(path, location string, value OriginalOrderType) error {
-	if err := validate.Enum(path, location, value, originalOrderTypeEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, originalOrderTypeEnum, true); err != nil {
 		return err
 	}
 	return nil

@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PublicGetAnnouncementsResponse public get announcements response
+//
 // swagger:model public_get_announcements_response
 type PublicGetAnnouncementsResponse struct {
 	BaseMessage
@@ -56,7 +56,6 @@ func (m PublicGetAnnouncementsResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO0)
-
 	var dataAO1 struct {
 		Result []*PublicGetAnnouncementsResponseResultItems0 `json:"result"`
 	}
@@ -68,7 +67,6 @@ func (m PublicGetAnnouncementsResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO1
 	}
 	_parts = append(_parts, jsonDataAO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 
@@ -135,6 +133,7 @@ func (m *PublicGetAnnouncementsResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PublicGetAnnouncementsResponseResultItems0 public get announcements response result items0
+//
 // swagger:model PublicGetAnnouncementsResponseResultItems0
 type PublicGetAnnouncementsResponseResultItems0 struct {
 

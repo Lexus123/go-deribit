@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // TickDirection Direction of the "tick" (`0` = Plus Tick, `1` = Zero-Plus Tick, `2` = Minus Tick, `3` = Zero-Minus Tick).
+//
 // swagger:model tick_direction
 type TickDirection int64
 
@@ -32,7 +32,7 @@ func init() {
 }
 
 func (m TickDirection) validateTickDirectionEnum(path, location string, value TickDirection) error {
-	if err := validate.Enum(path, location, value, tickDirectionEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, tickDirectionEnum, true); err != nil {
 		return err
 	}
 	return nil

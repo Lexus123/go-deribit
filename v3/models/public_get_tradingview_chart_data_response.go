@@ -9,14 +9,14 @@ import (
 	"encoding/json"
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PublicGetTradingviewChartDataResponse public get tradingview chart data response
+//
 // swagger:model public_get_tradingview_chart_data_response
 type PublicGetTradingviewChartDataResponse struct {
 	BaseMessage
@@ -57,7 +57,6 @@ func (m PublicGetTradingviewChartDataResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO0)
-
 	var dataAO1 struct {
 		Result *PublicGetTradingviewChartDataResponseAO1Result `json:"result"`
 	}
@@ -69,7 +68,6 @@ func (m PublicGetTradingviewChartDataResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO1
 	}
 	_parts = append(_parts, jsonDataAO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 
@@ -129,6 +127,7 @@ func (m *PublicGetTradingviewChartDataResponse) UnmarshalBinary(b []byte) error 
 }
 
 // PublicGetTradingviewChartDataResponseAO1Result public get tradingview chart data response a o1 result
+//
 // swagger:model PublicGetTradingviewChartDataResponseAO1Result
 type PublicGetTradingviewChartDataResponseAO1Result struct {
 
@@ -296,7 +295,7 @@ const (
 
 // prop value enum
 func (m *PublicGetTradingviewChartDataResponseAO1Result) validateStatusEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, publicGetTradingviewChartDataResponseAO1ResultTypeStatusPropEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, publicGetTradingviewChartDataResponseAO1ResultTypeStatusPropEnum, true); err != nil {
 		return err
 	}
 	return nil

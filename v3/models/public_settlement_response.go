@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PublicSettlementResponse public settlement response
+//
 // swagger:model public_settlement_response
 type PublicSettlementResponse struct {
 	BaseMessage
@@ -56,7 +56,6 @@ func (m PublicSettlementResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO0)
-
 	var dataAO1 struct {
 		Result *PublicSettlementResponseAO1Result `json:"result"`
 	}
@@ -68,7 +67,6 @@ func (m PublicSettlementResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO1
 	}
 	_parts = append(_parts, jsonDataAO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 
@@ -128,6 +126,7 @@ func (m *PublicSettlementResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PublicSettlementResponseAO1Result public settlement response a o1 result
+//
 // swagger:model PublicSettlementResponseAO1Result
 type PublicSettlementResponseAO1Result struct {
 

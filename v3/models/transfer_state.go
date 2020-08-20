@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // TransferState Transfer state, allowed values : `prepared`, `confirmed`, `cancelled`, `waiting_for_admin`, `rejection_reason`
+//
 // swagger:model transfer_state
 type TransferState string
 
@@ -50,7 +50,7 @@ func init() {
 }
 
 func (m TransferState) validateTransferStateEnum(path, location string, value TransferState) error {
-	if err := validate.Enum(path, location, value, transferStateEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, transferStateEnum, true); err != nil {
 		return err
 	}
 	return nil

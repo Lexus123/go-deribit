@@ -6,10 +6,11 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
+	"github.com/go-openapi/strfmt"
 )
 
 // Funding8h Funding 8h (perpetual only)
+//
 // swagger:model funding_8h
 type Funding8h float64
 

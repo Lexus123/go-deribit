@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // KindWithAny Instrument kind, `"future"` or `"option"` or `"any"` if don't care
+//
 // swagger:model kind_with_any
 type KindWithAny string
 
@@ -44,7 +44,7 @@ func init() {
 }
 
 func (m KindWithAny) validateKindWithAnyEnum(path, location string, value KindWithAny) error {
-	if err := validate.Enum(path, location, value, kindWithAnyEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, kindWithAnyEnum, true); err != nil {
 		return err
 	}
 	return nil

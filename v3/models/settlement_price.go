@@ -6,10 +6,11 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
+	"github.com/go-openapi/strfmt"
 )
 
 // SettlementPrice The settlement price for the instrument. Only when `state = open`
+//
 // swagger:model settlement_price
 type SettlementPrice float64
 

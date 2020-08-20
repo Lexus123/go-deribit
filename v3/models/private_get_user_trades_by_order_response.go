@@ -8,13 +8,13 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 )
 
 // PrivateGetUserTradesByOrderResponse private get user trades by order response
+//
 // swagger:model private_get_user_trades_by_order_response
 type PrivateGetUserTradesByOrderResponse struct {
 	BaseMessage
@@ -56,7 +56,6 @@ func (m PrivateGetUserTradesByOrderResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 
@@ -98,6 +97,7 @@ func (m *PrivateGetUserTradesByOrderResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PrivateGetUserTradesByOrderResponseAllOf1 private get user trades by order response all of1
+//
 // swagger:model PrivateGetUserTradesByOrderResponseAllOf1
 type PrivateGetUserTradesByOrderResponseAllOf1 []*UserTrade
 

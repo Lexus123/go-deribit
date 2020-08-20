@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // AddressBookType Address book type
+//
 // swagger:model address_book_type
 type AddressBookType string
 
@@ -41,7 +41,7 @@ func init() {
 }
 
 func (m AddressBookType) validateAddressBookTypeEnum(path, location string, value AddressBookType) error {
-	if err := validate.Enum(path, location, value, addressBookTypeEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, addressBookTypeEnum, true); err != nil {
 		return err
 	}
 	return nil

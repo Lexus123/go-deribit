@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // IndexName Index identifier, matches (base) cryptocurrency with quote currency
+//
 // swagger:model index_name
 type IndexName string
 
@@ -41,7 +41,7 @@ func init() {
 }
 
 func (m IndexName) validateIndexNameEnum(path, location string, value IndexName) error {
-	if err := validate.Enum(path, location, value, indexNameEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, indexNameEnum, true); err != nil {
 		return err
 	}
 	return nil

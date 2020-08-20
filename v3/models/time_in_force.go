@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // TimeInForce Order time in force: `"good_til_cancelled"`, `"fill_or_kill"`, `"immediate_or_cancel"`
+//
 // swagger:model time_in_force
 type TimeInForce string
 
@@ -44,7 +44,7 @@ func init() {
 }
 
 func (m TimeInForce) validateTimeInForceEnum(path, location string, value TimeInForce) error {
-	if err := validate.Enum(path, location, value, timeInForceEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, timeInForceEnum, true); err != nil {
 		return err
 	}
 	return nil

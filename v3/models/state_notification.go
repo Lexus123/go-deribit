@@ -8,14 +8,14 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // StateNotification state notification
+//
 // swagger:model state_notification
 type StateNotification struct {
 
@@ -94,7 +94,7 @@ const (
 
 // prop value enum
 func (m *StateNotification) validateStateEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, stateNotificationTypeStatePropEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, stateNotificationTypeStatePropEnum, true); err != nil {
 		return err
 	}
 	return nil

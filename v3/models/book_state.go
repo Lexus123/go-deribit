@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // BookState The state of the order book. Possible values are `open` and `closed`.
+//
 // swagger:model book_state
 type BookState string
 
@@ -41,7 +41,7 @@ func init() {
 }
 
 func (m BookState) validateBookStateEnum(path, location string, value BookState) error {
-	if err := validate.Enum(path, location, value, bookStateEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, bookStateEnum, true); err != nil {
 		return err
 	}
 	return nil

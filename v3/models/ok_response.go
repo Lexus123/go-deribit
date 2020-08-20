@@ -8,14 +8,14 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // OkResponse ok response
+//
 // swagger:model ok_response
 type OkResponse struct {
 	BaseMessage
@@ -57,7 +57,6 @@ func (m OkResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO0)
-
 	var dataAO1 struct {
 		Result *string `json:"result"`
 	}
@@ -69,7 +68,6 @@ func (m OkResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO1
 	}
 	_parts = append(_parts, jsonDataAO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 
@@ -106,7 +104,7 @@ func init() {
 
 // property enum
 func (m *OkResponse) validateResultEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, okResponseTypeResultPropEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, okResponseTypeResultPropEnum, true); err != nil {
 		return err
 	}
 	return nil

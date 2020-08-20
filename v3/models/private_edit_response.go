@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PrivateEditResponse private edit response
+//
 // swagger:model private_edit_response
 type PrivateEditResponse struct {
 	BaseMessage
@@ -56,7 +56,6 @@ func (m PrivateEditResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO0)
-
 	var dataAO1 struct {
 		Result *PrivateEditResponseAO1Result `json:"result"`
 	}
@@ -68,7 +67,6 @@ func (m PrivateEditResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO1
 	}
 	_parts = append(_parts, jsonDataAO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 
@@ -128,6 +126,7 @@ func (m *PrivateEditResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PrivateEditResponseAO1Result private edit response a o1 result
+//
 // swagger:model PrivateEditResponseAO1Result
 type PrivateEditResponseAO1Result struct {
 

@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PrivateSettlementResponse private settlement response
+//
 // swagger:model private_settlement_response
 type PrivateSettlementResponse struct {
 	BaseMessage
@@ -56,7 +56,6 @@ func (m PrivateSettlementResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO0)
-
 	var dataAO1 struct {
 		Result *PrivateSettlementResponseAO1Result `json:"result"`
 	}
@@ -68,7 +67,6 @@ func (m PrivateSettlementResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO1
 	}
 	_parts = append(_parts, jsonDataAO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 
@@ -128,6 +126,7 @@ func (m *PrivateSettlementResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PrivateSettlementResponseAO1Result private settlement response a o1 result
+//
 // swagger:model PrivateSettlementResponseAO1Result
 type PrivateSettlementResponseAO1Result struct {
 

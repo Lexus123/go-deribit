@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PublicGetFooterResponse public get footer response
+//
 // swagger:model public_get_footer_response
 type PublicGetFooterResponse struct {
 	BaseMessage
@@ -56,7 +56,6 @@ func (m PublicGetFooterResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO0)
-
 	var dataAO1 struct {
 		Result []*PublicGetFooterResponseResultItems0 `json:"result"`
 	}
@@ -68,7 +67,6 @@ func (m PublicGetFooterResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO1
 	}
 	_parts = append(_parts, jsonDataAO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 
@@ -135,6 +133,7 @@ func (m *PublicGetFooterResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PublicGetFooterResponseResultItems0 public get footer response result items0
+//
 // swagger:model PublicGetFooterResponseResultItems0
 type PublicGetFooterResponseResultItems0 struct {
 

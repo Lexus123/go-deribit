@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PrivateGetTransfersResponse private get transfers response
+//
 // swagger:model private_get_transfers_response
 type PrivateGetTransfersResponse struct {
 	BaseMessage
@@ -56,7 +56,6 @@ func (m PrivateGetTransfersResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO0)
-
 	var dataAO1 struct {
 		Result *PrivateGetTransfersResponseAO1Result `json:"result"`
 	}
@@ -68,7 +67,6 @@ func (m PrivateGetTransfersResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO1
 	}
 	_parts = append(_parts, jsonDataAO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 
@@ -128,6 +126,7 @@ func (m *PrivateGetTransfersResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PrivateGetTransfersResponseAO1Result private get transfers response a o1 result
+//
 // swagger:model PrivateGetTransfersResponseAO1Result
 type PrivateGetTransfersResponseAO1Result struct {
 

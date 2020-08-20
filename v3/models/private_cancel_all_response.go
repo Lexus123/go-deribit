@@ -6,14 +6,14 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PrivateCancelAllResponse private cancel all response
+//
 // swagger:model private_cancel_all_response
 type PrivateCancelAllResponse struct {
 	BaseMessage
@@ -69,7 +69,6 @@ func (m PrivateCancelAllResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO1)
-
 	var dataAO2 struct {
 		Result *float64 `json:"result"`
 	}
@@ -81,7 +80,6 @@ func (m PrivateCancelAllResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO2
 	}
 	_parts = append(_parts, jsonDataAO2)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 
@@ -133,5 +131,6 @@ func (m *PrivateCancelAllResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PrivateCancelAllResponseAllOf1 private cancel all response all of1
+//
 // swagger:model PrivateCancelAllResponseAllOf1
 type PrivateCancelAllResponseAllOf1 interface{}

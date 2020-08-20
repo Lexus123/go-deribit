@@ -6,14 +6,14 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PublicIndexResponse public index response
+//
 // swagger:model public_index_response
 type PublicIndexResponse struct {
 	BaseMessage
@@ -54,7 +54,6 @@ func (m PublicIndexResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO0)
-
 	var dataAO1 struct {
 		Result *PublicIndexResponseAO1Result `json:"result"`
 	}
@@ -66,7 +65,6 @@ func (m PublicIndexResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO1
 	}
 	_parts = append(_parts, jsonDataAO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 
@@ -126,6 +124,7 @@ func (m *PublicIndexResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PublicIndexResponseAO1Result public index response a o1 result
+//
 // swagger:model PublicIndexResponseAO1Result
 type PublicIndexResponseAO1Result struct {
 

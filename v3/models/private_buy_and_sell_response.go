@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PrivateBuyAndSellResponse private buy and sell response
+//
 // swagger:model private_buy_and_sell_response
 type PrivateBuyAndSellResponse struct {
 	BaseMessage
@@ -56,7 +56,6 @@ func (m PrivateBuyAndSellResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO0)
-
 	var dataAO1 struct {
 		Result *PrivateBuyAndSellResponseAO1Result `json:"result"`
 	}
@@ -68,7 +67,6 @@ func (m PrivateBuyAndSellResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO1
 	}
 	_parts = append(_parts, jsonDataAO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 
@@ -128,6 +126,7 @@ func (m *PrivateBuyAndSellResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PrivateBuyAndSellResponseAO1Result private buy and sell response a o1 result
+//
 // swagger:model PrivateBuyAndSellResponseAO1Result
 type PrivateBuyAndSellResponseAO1Result struct {
 

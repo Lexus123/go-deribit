@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PublicGetTradesVolumesResponse public get trades volumes response
+//
 // swagger:model public_get_trades_volumes_response
 type PublicGetTradesVolumesResponse struct {
 	BaseMessage
@@ -56,7 +56,6 @@ func (m PublicGetTradesVolumesResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO0)
-
 	var dataAO1 struct {
 		Result []*TradesVolumes `json:"result"`
 	}
@@ -68,7 +67,6 @@ func (m PublicGetTradesVolumesResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO1
 	}
 	_parts = append(_parts, jsonDataAO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 

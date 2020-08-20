@@ -8,14 +8,14 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // UserTrade user trade
+//
 // swagger:model user_trade
 type UserTrade struct {
 
@@ -269,7 +269,7 @@ const (
 
 // prop value enum
 func (m *UserTrade) validateLiquidationEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, userTradeTypeLiquidationPropEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, userTradeTypeLiquidationPropEnum, true); err != nil {
 		return err
 	}
 	return nil
@@ -312,7 +312,7 @@ const (
 
 // prop value enum
 func (m *UserTrade) validateLiquidityEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, userTradeTypeLiquidityPropEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, userTradeTypeLiquidityPropEnum, true); err != nil {
 		return err
 	}
 	return nil
@@ -376,7 +376,7 @@ const (
 
 // prop value enum
 func (m *UserTrade) validateOrderTypeEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, userTradeTypeOrderTypePropEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, userTradeTypeOrderTypePropEnum, true); err != nil {
 		return err
 	}
 	return nil

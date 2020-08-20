@@ -6,14 +6,14 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PrivateAddToAddressBookResponse private add to address book response
+//
 // swagger:model private_add_to_address_book_response
 type PrivateAddToAddressBookResponse struct {
 	BaseMessage
@@ -54,7 +54,6 @@ func (m PrivateAddToAddressBookResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO0)
-
 	var dataAO1 struct {
 		Result *AddressBookItem `json:"result"`
 	}
@@ -66,7 +65,6 @@ func (m PrivateAddToAddressBookResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO1
 	}
 	_parts = append(_parts, jsonDataAO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 

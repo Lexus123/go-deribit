@@ -6,14 +6,14 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PublicGetContractSizeResponse public get contract size response
+//
 // swagger:model public_get_contract_size_response
 type PublicGetContractSizeResponse struct {
 	BaseMessage
@@ -54,7 +54,6 @@ func (m PublicGetContractSizeResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO0)
-
 	var dataAO1 struct {
 		Result *PublicGetContractSizeResponseAO1Result `json:"result"`
 	}
@@ -66,7 +65,6 @@ func (m PublicGetContractSizeResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO1
 	}
 	_parts = append(_parts, jsonDataAO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 
@@ -126,6 +124,7 @@ func (m *PublicGetContractSizeResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PublicGetContractSizeResponseAO1Result public get contract size response a o1 result
+//
 // swagger:model PublicGetContractSizeResponseAO1Result
 type PublicGetContractSizeResponseAO1Result struct {
 

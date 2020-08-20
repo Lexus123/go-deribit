@@ -8,14 +8,14 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // BaseMessage base message
+//
 // swagger:model base_message
 type BaseMessage struct {
 
@@ -73,7 +73,7 @@ const (
 
 // prop value enum
 func (m *BaseMessage) validateJsonrpcEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, baseMessageTypeJsonrpcPropEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, baseMessageTypeJsonrpcPropEnum, true); err != nil {
 		return err
 	}
 	return nil

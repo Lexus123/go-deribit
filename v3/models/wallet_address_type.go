@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // WalletAddressType Address type/purpose, allowed values : `deposit`, `withdrawal`, `transfer`
+//
 // swagger:model wallet_address_type
 type WalletAddressType string
 
@@ -44,7 +44,7 @@ func init() {
 }
 
 func (m WalletAddressType) validateWalletAddressTypeEnum(path, location string, value WalletAddressType) error {
-	if err := validate.Enum(path, location, value, walletAddressTypeEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, walletAddressTypeEnum, true); err != nil {
 		return err
 	}
 	return nil

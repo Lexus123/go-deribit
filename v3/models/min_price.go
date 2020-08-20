@@ -6,10 +6,11 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
+	"github.com/go-openapi/strfmt"
 )
 
 // MinPrice The minimum price for the future. Any sell orders you submit lower than this price will be clamped to this minimum.
+//
 // swagger:model min_price
 type MinPrice float64
 

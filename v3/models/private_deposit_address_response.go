@@ -6,14 +6,14 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PrivateDepositAddressResponse private deposit address response
+//
 // swagger:model private_deposit_address_response
 type PrivateDepositAddressResponse struct {
 	BaseMessage
@@ -54,7 +54,6 @@ func (m PrivateDepositAddressResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO0)
-
 	var dataAO1 struct {
 		Result *PrivateDepositAddressResponseAO1Result `json:"result"`
 	}
@@ -66,7 +65,6 @@ func (m PrivateDepositAddressResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO1
 	}
 	_parts = append(_parts, jsonDataAO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 
@@ -126,6 +124,7 @@ func (m *PrivateDepositAddressResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PrivateDepositAddressResponseAO1Result Object if address is created, null otherwise
+//
 // swagger:model PrivateDepositAddressResponseAO1Result
 type PrivateDepositAddressResponseAO1Result struct {
 

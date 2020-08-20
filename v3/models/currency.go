@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // Currency Currency, i.e `"BTC"`, `"ETH"`
+//
 // swagger:model currency
 type Currency string
 
@@ -41,7 +41,7 @@ func init() {
 }
 
 func (m Currency) validateCurrencyEnum(path, location string, value Currency) error {
-	if err := validate.Enum(path, location, value, currencyEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, currencyEnum, true); err != nil {
 		return err
 	}
 	return nil

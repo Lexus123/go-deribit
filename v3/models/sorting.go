@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // Sorting sorting
+//
 // swagger:model sorting
 type Sorting string
 
@@ -44,7 +44,7 @@ func init() {
 }
 
 func (m Sorting) validateSortingEnum(path, location string, value Sorting) error {
-	if err := validate.Enum(path, location, value, sortingEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, sortingEnum, true); err != nil {
 		return err
 	}
 	return nil

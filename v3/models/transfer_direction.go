@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // TransferDirection Transfer direction
+//
 // swagger:model transfer_direction
 type TransferDirection string
 
@@ -41,7 +41,7 @@ func init() {
 }
 
 func (m TransferDirection) validateTransferDirectionEnum(path, location string, value TransferDirection) error {
-	if err := validate.Enum(path, location, value, transferDirectionEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, transferDirectionEnum, true); err != nil {
 		return err
 	}
 	return nil

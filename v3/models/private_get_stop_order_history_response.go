@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PrivateGetStopOrderHistoryResponse private get stop order history response
+//
 // swagger:model private_get_stop_order_history_response
 type PrivateGetStopOrderHistoryResponse struct {
 	BaseMessage
@@ -56,7 +56,6 @@ func (m PrivateGetStopOrderHistoryResponse) MarshalJSON() ([]byte, error) {
 		return nil, err
 	}
 	_parts = append(_parts, aO0)
-
 	var dataAO1 struct {
 		Result *PrivateGetStopOrderHistoryResponseAO1Result `json:"result"`
 	}
@@ -68,7 +67,6 @@ func (m PrivateGetStopOrderHistoryResponse) MarshalJSON() ([]byte, error) {
 		return nil, errAO1
 	}
 	_parts = append(_parts, jsonDataAO1)
-
 	return swag.ConcatJSON(_parts...), nil
 }
 
@@ -128,6 +126,7 @@ func (m *PrivateGetStopOrderHistoryResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PrivateGetStopOrderHistoryResponseAO1Result private get stop order history response a o1 result
+//
 // swagger:model PrivateGetStopOrderHistoryResponseAO1Result
 type PrivateGetStopOrderHistoryResponseAO1Result struct {
 
