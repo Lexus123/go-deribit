@@ -6,9 +6,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/adampointer/go-deribit/v3/client/private"
-	"github.com/adampointer/go-deribit/v3/client/public"
-	"github.com/adampointer/go-deribit/v3/models"
+	"github.com/Lexus123/go-deribit/v3/client/private"
+	"github.com/Lexus123/go-deribit/v3/client/public"
+	"github.com/Lexus123/go-deribit/v3/models"
 )
 
 // SubscribeTicker subscribes to the ticker.{instrument_name}.{interval} channel

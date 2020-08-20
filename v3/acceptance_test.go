@@ -7,13 +7,13 @@ import (
 	"os"
 	"testing"
 
-	"github.com/adampointer/go-deribit/v3/client/account_management"
-	"github.com/adampointer/go-deribit/v3/client/market_data"
-	"github.com/adampointer/go-deribit/v3/client/public"
-	"github.com/adampointer/go-deribit/v3/client/supporting"
+	"github.com/Lexus123/go-deribit/v3/client/account_management"
+	"github.com/Lexus123/go-deribit/v3/client/market_data"
+	"github.com/Lexus123/go-deribit/v3/client/public"
+	"github.com/Lexus123/go-deribit/v3/client/supporting"
 
-	"github.com/adampointer/go-deribit/v3/client"
-	"github.com/adampointer/go-deribit/v3/client/websocket_only"
+	"github.com/Lexus123/go-deribit/v3/client"
+	"github.com/Lexus123/go-deribit/v3/client/websocket_only"
 	"github.com/iancoleman/strcase"
 	"github.com/stretchr/testify/assert"
 )
