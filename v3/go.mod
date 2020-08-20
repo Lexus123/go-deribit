@@ -1,5 +1,7 @@
 module github.com/Lexus123/go-deribit/v3
 
+go 1.13
+
 require (
 	github.com/armon/consul-api v0.0.0-20180202201655-eb2c6b5be1b6 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20200819183940-29e1ff8eb0bb // indirect
@@ -31,5 +33,3 @@ require (
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	gopkg.in/ini.v1 v1.60.0 // indirect
 )
-
-go 1.13
