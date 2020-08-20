@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PublicGetFooterResponse public get footer response
+//
 // swagger:model public_get_footer_response
 type PublicGetFooterResponse struct {
 
@@ -82,6 +82,7 @@ func (m *PublicGetFooterResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PublicGetFooterResponseResultItems0 public get footer response result items0
+//
 // swagger:model PublicGetFooterResponseResultItems0
 type PublicGetFooterResponseResultItems0 struct {
 

@@ -8,13 +8,13 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 )
 
 // UserTradesByOrderResponse user trades by order response
+//
 // swagger:model user_trades_by_order_response
 type UserTradesByOrderResponse []*UserTrade
 

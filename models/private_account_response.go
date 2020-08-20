@@ -8,14 +8,14 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PrivateAccountResponse private account response
+//
 // swagger:model private_account_response
 type PrivateAccountResponse struct {
 
@@ -75,6 +75,7 @@ func (m *PrivateAccountResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PrivateAccountResponseResult private account response result
+//
 // swagger:model PrivateAccountResponseResult
 type PrivateAccountResponseResult struct {
 
@@ -586,7 +587,7 @@ const (
 
 // prop value enum
 func (m *PrivateAccountResponseResult) validateTypeEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, privateAccountResponseResultTypeTypePropEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, privateAccountResponseResultTypeTypePropEnum, true); err != nil {
 		return err
 	}
 	return nil

@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // Trigger Trigger type (Only for stop orders). Allowed values: `"index_price"`, `"mark_price"`, `"last_price"`.
+//
 // swagger:model trigger
 type Trigger string
 
@@ -44,7 +44,7 @@ func init() {
 }
 
 func (m Trigger) validateTriggerEnum(path, location string, value Trigger) error {
-	if err := validate.Enum(path, location, value, triggerEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, triggerEnum, true); err != nil {
 		return err
 	}
 	return nil

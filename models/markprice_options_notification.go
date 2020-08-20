@@ -8,13 +8,13 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 )
 
 // MarkpriceOptionsNotification markprice options notification
+//
 // swagger:model markprice_options_notification
 type MarkpriceOptionsNotification []*MarkpriceOptionsNotificationItems0
 
@@ -45,6 +45,7 @@ func (m MarkpriceOptionsNotification) Validate(formats strfmt.Registry) error {
 }
 
 // MarkpriceOptionsNotificationItems0 markprice options notification items0
+//
 // swagger:model MarkpriceOptionsNotificationItems0
 type MarkpriceOptionsNotificationItems0 struct {
 

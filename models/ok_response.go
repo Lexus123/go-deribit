@@ -8,14 +8,14 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // OkResponse ok response
+//
 // swagger:model ok_response
 type OkResponse struct {
 
@@ -59,7 +59,7 @@ const (
 
 // prop value enum
 func (m *OkResponse) validateResultEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, okResponseTypeResultPropEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, okResponseTypeResultPropEnum, true); err != nil {
 		return err
 	}
 	return nil

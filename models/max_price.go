@@ -6,10 +6,11 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
+	"github.com/go-openapi/strfmt"
 )
 
 // MaxPrice The maximum price for the future. Any buy orders you submit higher than this price, will be clamped to this maximum.
+//
 // swagger:model max_price
 type MaxPrice float64
 

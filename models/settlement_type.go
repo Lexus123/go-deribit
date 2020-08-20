@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // SettlementType The type of settlement. `settlement`, `delivery` or `bankruptcy`.
+//
 // swagger:model settlement_type
 type SettlementType string
 
@@ -44,7 +44,7 @@ func init() {
 }
 
 func (m SettlementType) validateSettlementTypeEnum(path, location string, value SettlementType) error {
-	if err := validate.Enum(path, location, value, settlementTypeEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, settlementTypeEnum, true); err != nil {
 		return err
 	}
 	return nil

@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // WithdrawalState Withdrawal state, allowed values : `unconfirmed`, `confirmed`, `cancelled`, `completed`, `interrupted`, `rejected`
+//
 // swagger:model withdrawal_state
 type WithdrawalState string
 
@@ -53,7 +53,7 @@ func init() {
 }
 
 func (m WithdrawalState) validateWithdrawalStateEnum(path, location string, value WithdrawalState) error {
-	if err := validate.Enum(path, location, value, withdrawalStateEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, withdrawalStateEnum, true); err != nil {
 		return err
 	}
 	return nil

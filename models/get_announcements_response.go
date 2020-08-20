@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // GetAnnouncementsResponse get announcements response
+//
 // swagger:model get_announcements_response
 type GetAnnouncementsResponse struct {
 
@@ -82,6 +82,7 @@ func (m *GetAnnouncementsResponse) UnmarshalBinary(b []byte) error {
 }
 
 // GetAnnouncementsResponseResultItems0 get announcements response result items0
+//
 // swagger:model GetAnnouncementsResponseResultItems0
 type GetAnnouncementsResponseResultItems0 struct {
 

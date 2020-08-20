@@ -6,14 +6,14 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PrivateGetMarginsResponse private get margins response
+//
 // swagger:model private_get_margins_response
 type PrivateGetMarginsResponse struct {
 
@@ -73,6 +73,7 @@ func (m *PrivateGetMarginsResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PrivateGetMarginsResponseResult private get margins response result
+//
 // swagger:model PrivateGetMarginsResponseResult
 type PrivateGetMarginsResponseResult struct {
 

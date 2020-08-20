@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // SettlementResponse settlement response
+//
 // swagger:model settlement_response
 type SettlementResponse struct {
 
@@ -75,6 +75,7 @@ func (m *SettlementResponse) UnmarshalBinary(b []byte) error {
 }
 
 // SettlementResponseResult settlement response result
+//
 // swagger:model SettlementResponseResult
 type SettlementResponseResult struct {
 

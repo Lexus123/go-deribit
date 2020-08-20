@@ -6,10 +6,11 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
+	"github.com/go-openapi/strfmt"
 )
 
 // MatchingID Matching (taker) order id, `null` if it is not users order
+//
 // swagger:model matching_id
 type MatchingID string
 

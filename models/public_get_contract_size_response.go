@@ -6,14 +6,14 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PublicGetContractSizeResponse public get contract size response
+//
 // swagger:model public_get_contract_size_response
 type PublicGetContractSizeResponse struct {
 
@@ -73,6 +73,7 @@ func (m *PublicGetContractSizeResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PublicGetContractSizeResponseResult public get contract size response result
+//
 // swagger:model PublicGetContractSizeResponseResult
 type PublicGetContractSizeResponseResult struct {
 

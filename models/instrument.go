@@ -8,14 +8,14 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // Instrument instrument
+//
 // swagger:model instrument
 type Instrument struct {
 
@@ -155,7 +155,7 @@ const (
 
 // prop value enum
 func (m *Instrument) validateBaseCurrencyEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, instrumentTypeBaseCurrencyPropEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, instrumentTypeBaseCurrencyPropEnum, true); err != nil {
 		return err
 	}
 	return nil
@@ -267,7 +267,7 @@ const (
 
 // prop value enum
 func (m *Instrument) validateOptionTypeEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, instrumentTypeOptionTypePropEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, instrumentTypeOptionTypePropEnum, true); err != nil {
 		return err
 	}
 	return nil
@@ -307,7 +307,7 @@ const (
 
 // prop value enum
 func (m *Instrument) validateQuoteCurrencyEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, instrumentTypeQuoteCurrencyPropEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, instrumentTypeQuoteCurrencyPropEnum, true); err != nil {
 		return err
 	}
 	return nil
@@ -353,7 +353,7 @@ const (
 
 // prop value enum
 func (m *Instrument) validateSettlementPeriodEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, instrumentTypeSettlementPeriodPropEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, instrumentTypeSettlementPeriodPropEnum, true); err != nil {
 		return err
 	}
 	return nil

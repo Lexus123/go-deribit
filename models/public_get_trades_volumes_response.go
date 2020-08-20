@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PublicGetTradesVolumesResponse public get trades volumes response
+//
 // swagger:model public_get_trades_volumes_response
 type PublicGetTradesVolumesResponse struct {
 

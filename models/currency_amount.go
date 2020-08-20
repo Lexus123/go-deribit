@@ -6,10 +6,11 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
+	"github.com/go-openapi/strfmt"
 )
 
 // CurrencyAmount Amount of funds in given currency
+//
 // swagger:model currency_amount
 type CurrencyAmount float64
 

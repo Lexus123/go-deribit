@@ -6,14 +6,14 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PublicGetorderbookResponse public getorderbook response
+//
 // swagger:model public_getorderbook_response
 type PublicGetorderbookResponse struct {
 
@@ -73,6 +73,7 @@ func (m *PublicGetorderbookResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PublicGetorderbookResponseResult public getorderbook response result
+//
 // swagger:model PublicGetorderbookResponseResult
 type PublicGetorderbookResponseResult struct {
 

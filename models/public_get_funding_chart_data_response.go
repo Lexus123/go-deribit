@@ -6,14 +6,14 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PublicGetFundingChartDataResponse public get funding chart data response
+//
 // swagger:model public_get_funding_chart_data_response
 type PublicGetFundingChartDataResponse struct {
 
@@ -73,6 +73,7 @@ func (m *PublicGetFundingChartDataResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PublicGetFundingChartDataResponseResult public get funding chart data response result
+//
 // swagger:model PublicGetFundingChartDataResponseResult
 type PublicGetFundingChartDataResponseResult struct {
 

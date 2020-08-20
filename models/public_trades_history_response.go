@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PublicTradesHistoryResponse public trades history response
+//
 // swagger:model public_trades_history_response
 type PublicTradesHistoryResponse struct {
 
@@ -75,6 +75,7 @@ func (m *PublicTradesHistoryResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PublicTradesHistoryResponseResult public trades history response result
+//
 // swagger:model PublicTradesHistoryResponseResult
 type PublicTradesHistoryResponseResult struct {
 

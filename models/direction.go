@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // Direction direction, `buy` or `sell`
+//
 // swagger:model direction
 type Direction string
 
@@ -41,7 +41,7 @@ func init() {
 }
 
 func (m Direction) validateDirectionEnum(path, location string, value Direction) error {
-	if err := validate.Enum(path, location, value, directionEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, directionEnum, true); err != nil {
 		return err
 	}
 	return nil

@@ -6,10 +6,11 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
+	"github.com/go-openapi/strfmt"
 )
 
 // MaxShow Maximum amount within an order to be shown to other traders, 0 for invisible order.
+//
 // swagger:model max_show
 type MaxShow float64
 

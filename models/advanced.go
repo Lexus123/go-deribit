@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // Advanced advanced type: `"usd"` or `"implv"` (Only for options; field is omitted if not applicable).
+//
 //
 // swagger:model advanced
 type Advanced string
@@ -42,7 +42,7 @@ func init() {
 }
 
 func (m Advanced) validateAdvancedEnum(path, location string, value Advanced) error {
-	if err := validate.Enum(path, location, value, advancedEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, advancedEnum, true); err != nil {
 		return err
 	}
 	return nil

@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PrivateGetDepositsResponse private get deposits response
+//
 // swagger:model private_get_deposits_response
 type PrivateGetDepositsResponse struct {
 
@@ -75,6 +75,7 @@ func (m *PrivateGetDepositsResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PrivateGetDepositsResponseResult private get deposits response result
+//
 // swagger:model PrivateGetDepositsResponseResult
 type PrivateGetDepositsResponseResult struct {
 

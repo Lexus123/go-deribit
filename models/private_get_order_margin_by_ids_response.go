@@ -8,14 +8,14 @@ package models
 import (
 	"strconv"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PrivateGetOrderMarginByIdsResponse private get order margin by ids response
+//
 // swagger:model private_get_order_margin_by_ids_response
 type PrivateGetOrderMarginByIdsResponse struct {
 

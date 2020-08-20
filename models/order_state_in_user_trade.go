@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // OrderStateInUserTrade order state, `"open"`, `"filled"`, `"rejected"`, `"cancelled"`, `"untriggered"` or `"archive"` (if order was archived)
+//
 // swagger:model order_state_in_user_trade
 type OrderStateInUserTrade string
 
@@ -53,7 +53,7 @@ func init() {
 }
 
 func (m OrderStateInUserTrade) validateOrderStateInUserTradeEnum(path, location string, value OrderStateInUserTrade) error {
-	if err := validate.Enum(path, location, value, orderStateInUserTradeEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, orderStateInUserTradeEnum, true); err != nil {
 		return err
 	}
 	return nil

@@ -6,10 +6,11 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
+	"github.com/go-openapi/strfmt"
 )
 
 // Implv Implied volatility in percent. (Only if `advanced="implv"`)
+//
 // swagger:model implv
 type Implv float64
 

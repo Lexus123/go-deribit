@@ -8,13 +8,13 @@ package models
 import (
 	"encoding/json"
 
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 )
 
 // OrderState order state, `"open"`, `"filled"`, `"rejected"`, `"cancelled"`, `"untriggered"`
+//
 // swagger:model order_state
 type OrderState string
 
@@ -53,7 +53,7 @@ func init() {
 }
 
 func (m OrderState) validateOrderStateEnum(path, location string, value OrderState) error {
-	if err := validate.Enum(path, location, value, orderStateEnum); err != nil {
+	if err := validate.EnumCase(path, location, value, orderStateEnum, true); err != nil {
 		return err
 	}
 	return nil

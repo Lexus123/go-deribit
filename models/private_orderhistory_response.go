@@ -6,14 +6,14 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	strfmt "github.com/go-openapi/strfmt"
-
 	"github.com/go-openapi/errors"
+	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 )
 
 // PrivateOrderhistoryResponse private orderhistory response
+//
 // swagger:model private_orderhistory_response
 type PrivateOrderhistoryResponse struct {
 
@@ -73,6 +73,7 @@ func (m *PrivateOrderhistoryResponse) UnmarshalBinary(b []byte) error {
 }
 
 // PrivateOrderhistoryResponseResult private orderhistory response result
+//
 // swagger:model PrivateOrderhistoryResponseResult
 type PrivateOrderhistoryResponseResult struct {
 
